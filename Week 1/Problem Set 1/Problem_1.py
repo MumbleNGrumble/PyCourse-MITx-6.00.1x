@@ -7,6 +7,8 @@ Created on Sun Jun 11 08:00:50 2017
 
 # Test Case: s = 'azcbobobegghakl'
 
+s = 'azcbobobegghakl'
+
 numVowels = 0
 
 for letter in s:
