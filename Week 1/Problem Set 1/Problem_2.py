@@ -7,6 +7,8 @@ Created on Sun Jun 11 08:15:57 2017
 
 # Test Case: s = 'azcbobobegghakl'
 
+s = 'azcbobobegghakl'
+
 i = 0
 j = i + 3
 bobCounter = 0
