@@ -1,1 +1,1 @@
-# PyCourse-MITx-6.00.1x
+# PyCourse-edX-MITx-6.00.1x
