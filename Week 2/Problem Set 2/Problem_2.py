@@ -32,7 +32,7 @@ def CalculateRemainingBalance(balance, payment, monthlyInterestRate):
     
 def CalculateMinimumPayment(balance, annualInterestRate):
     remainingBalance = balance
-    monthlyInterestRate = annualInterestRate/12.0
+    monthlyInterestRate = annualInterestRate / 12.0
     minimumFixedMonthlyPayment = 0
     
     while remainingBalance > 0:
