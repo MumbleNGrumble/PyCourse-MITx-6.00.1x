@@ -8,6 +8,7 @@
 # (so be sure to read the docstrings!)
 
 import random
+import string
 
 WORDLIST_FILENAME = "words.txt"
 
@@ -99,7 +100,20 @@ def getAvailableLetters(lettersGuessed):
     '''
     # FILL IN YOUR CODE HERE...
     
-
+    # Test Case
+    #lettersGuessed = ['e', 'i', 'k', 'p', 'r', 's']
+    #print(getAvailableLetters(lettersGuessed))
+    #Prints abcdfghjlmnoqtuvwxyz
+    
+    availableLetters = list(string.ascii_lowercase)
+    
+    for letter in lettersGuessed:
+        if letter in availableLetters:
+            availableLetters.remove(letter)
+    
+    return "".join(availableLetters)
+    
+    
 def hangman(secretWord):
     '''
     secretWord: string, the secret word to guess.
