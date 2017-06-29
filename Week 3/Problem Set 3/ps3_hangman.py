@@ -65,7 +65,6 @@ def isWordGuessed(secretWord, lettersGuessed):
     return True
 
 
-
 def getGuessedWord(secretWord, lettersGuessed):
     '''
     secretWord: string, the word the user is guessing
@@ -74,8 +73,23 @@ def getGuessedWord(secretWord, lettersGuessed):
       what letters in secretWord have been guessed so far.
     '''
     # FILL IN YOUR CODE HERE...
-
-
+    
+    # Test Case
+    #secretWord = 'apple' 
+    #lettersGuessed = ['e', 'i', 'k', 'p', 'r', 's']
+    #print(getGuessedWord(secretWord, lettersGuessed))
+    #Prints '_ pp_ e'
+    
+    guessedWord = ""
+    
+    for letter in secretWord:
+        if letter in lettersGuessed:
+            guessedWord += letter
+        else:
+            guessedWord += "_ "
+    
+    return guessedWord
+    
 
 def getAvailableLetters(lettersGuessed):
     '''
