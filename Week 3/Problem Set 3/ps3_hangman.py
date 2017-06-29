@@ -58,17 +58,13 @@ def isWordGuessed(secretWord, lettersGuessed):
     #print(isWordGuessed(secretWord, lettersGuessed))
     #Prints False
     
-    correctGuesses = []
+    for letter in secretWord:
+        if letter not in lettersGuessed:
+            return False
     
-    for letter in lettersGuessed:
-        if letter in secretWord:
-            correctGuesses.append(letter)
-    
-    if len(correctGuesses) == len(secretWord):
-        return True
-    else:
-        return False
-            
+    return True
+
+
 
 def getGuessedWord(secretWord, lettersGuessed):
     '''
