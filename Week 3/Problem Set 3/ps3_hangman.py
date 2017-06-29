@@ -51,8 +51,24 @@ def isWordGuessed(secretWord, lettersGuessed):
       False otherwise
     '''
     # FILL IN YOUR CODE HERE...
-
-
+    
+    # Test Case
+    #secretWord = 'apple' 
+    #lettersGuessed = ['e', 'i', 'k', 'p', 'r', 's']
+    #print(isWordGuessed(secretWord, lettersGuessed))
+    #Prints False
+    
+    correctGuesses = []
+    
+    for letter in lettersGuessed:
+        if letter in secretWord:
+            correctGuesses.append(letter)
+    
+    if len(correctGuesses) == len(secretWord):
+        return True
+    else:
+        return False
+            
 
 def getGuessedWord(secretWord, lettersGuessed):
     '''
