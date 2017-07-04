@@ -13,10 +13,9 @@ def oddTuples(aTup):
     '''
     # Your Code Here
     
-    l = []
-    
+    tup = ()
     for index, value in enumerate(aTup):
         if index % 2 == 0:
-            l.append(value)
+            tup += (value,)
     
-    return tuple(l)
+    return tup
