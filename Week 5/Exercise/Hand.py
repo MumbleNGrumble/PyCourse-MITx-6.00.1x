@@ -82,8 +82,20 @@ class Hand(object):
         word: string
         returns: Boolean (if the word was or was not made)
         """
-        # Your code here
-        raise NotImplementedError()
+        handCopy = self.hand.copy()
+        
+        try:
+            for letter in word:
+                handCopy[letter] -= 1
+            
+            if min(handCopy.values()) >= 0:
+                self.hand = handCopy.copy()
+                return True
+            else:
+                return False
+        except:
+            return False
+            
 
     
 myHand = Hand(7)
