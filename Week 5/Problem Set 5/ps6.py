@@ -113,7 +113,9 @@ class Message(object):
             shiftDict[letter] = shifted[index]
             shiftDict[letter.upper()] = shifted[index].upper()
         
-        return shiftDict
+        self.encrypting_dict = shiftDict
+        
+        return self.encrypting_dict
 
     def apply_shift(self, shift):
         '''
