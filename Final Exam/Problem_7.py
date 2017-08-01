@@ -47,7 +47,14 @@ class MITCampus(Campus):
         Adds new_tent_loc to the campus only if the tent is at least 0.5 distance 
         away from all other tents already there. Campus is unchanged otherwise.
         Returns True if it could add the tent, False otherwise. """
-        # Your code here
+        
+        for tent in self.tentList:
+            if tent.dist_from(new_tent_loc) < 0.5:
+                return False
+        
+        self.tentList.append(new_tent_loc)
+        
+        return True
         
     def remove_tent(self, tent_loc):
         """ Assumes tent_loc is a Location
