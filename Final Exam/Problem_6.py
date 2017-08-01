@@ -44,3 +44,20 @@ class Bag(Container):
             return self.vals[e]
         else:
             return 0
+
+    def __add__(self, other):
+        newBag = Bag()
+        
+        for item in self.vals:
+            if item in newBag.vals:
+                newBag.vals[item] += self.vals[item]
+            else:
+                newBag.vals[item] = self.vals[item]
+        
+        for item in other.vals:
+            if item in newBag.vals:
+                newBag.vals[item] += other.vals[item]
+            else:
+                newBag.vals[item] = other.vals[item]
+        
+        return newBag
