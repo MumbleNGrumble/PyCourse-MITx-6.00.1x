@@ -61,7 +61,11 @@ class MITCampus(Campus):
         Removes tent_loc from the campus. 
         Raises a ValueError if there is not a tent at tent_loc.
         Does not return anything """
-        # Your code here
+        
+        if tent_loc in self.tentList:
+            self.tentList.remove(tent_loc)
+        else:
+            raise ValueError
       
     def get_tents(self):
         """ Returns a list of all tents on the campus. The list should contain 
