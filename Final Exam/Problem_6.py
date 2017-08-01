@@ -61,3 +61,21 @@ class Bag(Container):
                 newBag.vals[item] = other.vals[item]
         
         return newBag
+
+class ASet(Container):
+    def remove(self, e):
+        """assumes e is hashable
+           removes e from self"""
+        
+        if e in self.vals:
+            del self.vals[e]
+
+    def is_in(self, e):
+        """assumes e is hashable
+           returns True if e has been inserted in self and
+           not subsequently removed, and False otherwise."""
+        
+        if e in self.vals:
+            return True
+        else:
+            return False
