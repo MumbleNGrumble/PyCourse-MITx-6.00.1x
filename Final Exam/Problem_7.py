@@ -71,4 +71,21 @@ class MITCampus(Campus):
         """ Returns a list of all tents on the campus. The list should contain 
         the string representation of the Location of a tent. The list should 
         be sorted by the x coordinate of the location. """
-        # Your code here
+        
+        sortedTents = self.tentList.copy()
+        
+        suffixSt = 0
+        
+        while suffixSt != len(sortedTents):
+            for i in range(suffixSt, len(sortedTents)):
+                if sortedTents[i].getX() < sortedTents[suffixSt].getX():
+                    sortedTents[suffixSt], sortedTents[i] = sortedTents[i], sortedTents[suffixSt]
+            
+            suffixSt += 1
+        
+        tents = []
+        
+        for tent in sortedTents:
+            tents.append(tent.__str__())
+        
+        return tents
